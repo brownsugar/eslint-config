@@ -1,0 +1,28 @@
+{
+  "name": "@brownsugar/eslint-config-vue",
+  "version": "0.0.0",
+  "description": "Preferred ESLint configs for Vue 3.",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brownsugar/eslint-config.git"
+  },
+  "author": "Lay",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://github.com/brownsugar/eslint-config",
+  "devDependencies": {
+    "@brownsugar/eslint-config-typescript": "^0.0.1",
+    "eslint-plugin-vue": "^9.7.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.27.0"
+  }
+}

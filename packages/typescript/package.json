@@ -1,0 +1,29 @@
+{
+  "name": "@brownsugar/eslint-config-typescript",
+  "version": "0.0.0",
+  "description": "Preferred ESLint configs for TypeScript.",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brownsugar/eslint-config.git"
+  },
+  "author": "Lay",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://github.com/brownsugar/eslint-config",
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^11.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "typescript": "^4.8.4"
+  },
+  "peerDependencies": {
+    "eslint": "^8.27.0"
+  }
+}

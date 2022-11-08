@@ -1,0 +1,24 @@
+{
+  "name": "@brownsugar/eslint-config",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Preferred ESLint configs for myself.",
+  "scripts": {
+    "release": "lerna publish",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brownsugar/eslint-config.git"
+  },
+  "author": "Lay",
+  "license": "MIT",
+  "homepage": "https://github.com/brownsugar/eslint-config",
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "lerna": "^6.0.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
