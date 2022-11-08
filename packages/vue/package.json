@@ -1,6 +1,6 @@
 {
   "name": "@brownsugar/eslint-config-vue",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Preferred ESLint configs for Vue 3.",
   "main": "index.js",
   "files": [
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/brownsugar/eslint-config",
   "devDependencies": {
-    "@brownsugar/eslint-config-typescript": "*",
+    "@brownsugar/eslint-config-typescript": "^1.0.0",
     "eslint-plugin-vue": "^9.7.0"
   },
   "peerDependencies": {
