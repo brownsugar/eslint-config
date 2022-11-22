@@ -25,6 +25,8 @@ module.exports = {
     ],
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-namespace': 'off',
+    // Types declaration
+    'no-use-before-define': ['error', { typedefs: false }],
 
     // Use TS rules instead of JS rules
     indent: 'off',
