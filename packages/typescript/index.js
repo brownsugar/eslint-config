@@ -25,14 +25,13 @@ module.exports = {
     ],
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-namespace': 'off',
-    // Types declaration
-    'no-use-before-define': ['error', { typedefs: false }],
 
     // Use TS rules instead of JS rules
     indent: 'off',
     '@typescript-eslint/indent': ['error', 2],
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': 'error',
+    "no-use-before-define": "off",
 
     // Quotes
     'quote-props': ['error', 'as-needed'],
