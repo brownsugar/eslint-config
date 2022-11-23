@@ -31,7 +31,7 @@ module.exports = {
     '@typescript-eslint/indent': ['error', 2],
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': 'error',
-    "no-use-before-define": "off",
+    'no-use-before-define': 'off',
 
     // Quotes
     'quote-props': ['error', 'as-needed'],
