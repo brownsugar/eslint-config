@@ -16,6 +16,17 @@ module.exports = {
     // Common rules
     '@typescript-eslint/await-thenable': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
+      {
+        multiline: {
+          delimiter: 'none'
+        },
+        singleline: {
+          delimiter: 'comma'
+        }
+      }
+    ],
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-empty-interface': [
       'error',
