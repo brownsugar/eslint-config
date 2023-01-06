@@ -46,6 +46,8 @@ module.exports = {
 
     // Quotes
     'quote-props': ['error', 'as-needed'],
+    // Brace style
+    curly: ['error', 'multi-or-nest'],
     // No default export found in imported module "*".
     'import/default': 'off'
   }
