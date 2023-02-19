@@ -44,10 +44,9 @@ module.exports = {
     '@typescript-eslint/func-call-spacing': 'error',
     'no-use-before-define': 'off',
 
-    // Quotes
-    'quote-props': ['error', 'as-needed'],
-    // Brace style
     curly: ['error', 'multi-or-nest'],
+    'no-useless-constructor': 'off',
+    'quote-props': ['error', 'as-needed'],
     // No default export found in imported module "*".
     'import/default': 'off'
   }
