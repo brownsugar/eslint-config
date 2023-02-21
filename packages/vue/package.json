@@ -23,7 +23,6 @@
     "eslint-plugin-vue": "^9.9.0"
   },
   "peerDependencies": {
-    "eslint": "^8.27.0",
-    "vue": "^3.0.0"
+    "vue": "^3"
   }
 }
