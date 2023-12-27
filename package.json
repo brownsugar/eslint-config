@@ -15,8 +15,8 @@
   "license": "MIT",
   "homepage": "https://github.com/brownsugar/eslint-config",
   "devDependencies": {
-    "eslint": "^8.34.0",
-    "lerna": "^6.5.1"
+    "eslint": "^8.56.0",
+    "lerna": "^8.0.1"
   },
   "workspaces": [
     "packages/*"
