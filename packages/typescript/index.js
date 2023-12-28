@@ -1,3 +1,5 @@
+const stylistic = require('@stylistic/eslint-plugin')
+
 module.exports = {
   env: {
     browser: true,
@@ -8,7 +10,6 @@ module.exports = {
   },
   plugins: [
     '@stylistic',
-    '@stylistic/ts',
   ],
   extends: [
     'plugin:@typescript-eslint/recommended',
@@ -18,7 +19,7 @@ module.exports = {
     // "plugin:@typescript-eslint/stylistic-type-checked",
   ],
   rules: {
-    // Common rules
+    // Typescript rules
     '@typescript-eslint/await-thenable': 'off',
     '@typescript-eslint/consistent-type-assertions': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
@@ -34,27 +35,17 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
 
     // Stylistic rules
+    ...stylistic.configs['disable-legacy'].rules,
+    ...stylistic.configs['recommended-extends'].rules,
     '@stylistic/arrow-parens': ['error', 'as-needed'],
-    '@stylistic/comma-dangle': ['error', 'always-multiline'],
-    '@stylistic/member-delimiter-style': [
-      'error',
-      {
-        multiline: {
-          delimiter: 'none',
-        },
-        singleline: {
-          delimiter: 'comma',
-        },
-      },
-    ],
-    '@stylistic/quotes': ['error', 'single'],
-    '@stylistic/ts/indent': ['error', 2],
-    '@stylistic/ts/func-call-spacing': 'error',
+    '@stylistic/func-call-spacing': 'error',
+    '@stylistic/quote-props': ['error', 'as-needed'],
+    '@stylistic/space-before-function-paren': 'error',
 
+    // General rules
     curly: ['error', 'multi-or-nest'],
     'no-use-before-define': 'off',
     'no-useless-constructor': 'off',
-    'quote-props': ['error', 'as-needed'],
     // No default export found in imported module "*".
     'import/default': 'off',
   },

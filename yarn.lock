@@ -556,7 +556,7 @@
   dependencies:
     "@typescript-eslint/utils" "^6.13.2"
 
-"@stylistic/eslint-plugin-ts@1.5.1", "@stylistic/eslint-plugin-ts@^1.5.1":
+"@stylistic/eslint-plugin-ts@1.5.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@stylistic/eslint-plugin-ts/-/eslint-plugin-ts-1.5.1.tgz#dce3b2139986c4e47a588e4371885c9dabd747a7"
   integrity sha512-oXM1V7Jp8G9+udxQTy+Igo79LR2e5HXiWqlA/3v+/PAqWxniR9nJqJSBjtQKJTPsGplDqn/ASpHUOETP4EI/4A==

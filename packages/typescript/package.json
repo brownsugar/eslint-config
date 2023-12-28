@@ -20,7 +20,6 @@
   "homepage": "https://github.com/brownsugar/eslint-config",
   "dependencies": {
     "@stylistic/eslint-plugin": "^1.5.1",
-    "@stylistic/eslint-plugin-ts": "^1.5.1",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0"
   },
