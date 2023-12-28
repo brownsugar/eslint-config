@@ -20,7 +20,7 @@
   "homepage": "https://github.com/brownsugar/eslint-config",
   "dependencies": {
     "@brownsugar/eslint-config-typescript": "^1.0.7",
-    "eslint-plugin-vue": "^9.9.0"
+    "eslint-plugin-vue": "^9.19.2"
   },
   "peerDependencies": {
     "vue": "^3"

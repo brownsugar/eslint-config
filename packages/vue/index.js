@@ -1,9 +1,9 @@
 module.exports = {
   parserOptions: {
-    extraFileExtensions: ['.vue']
+    extraFileExtensions: ['.vue'],
   },
   extends: [
     '@brownsugar/typescript',
-    'plugin:vue/vue3-recommended'
-  ]
+    'plugin:vue/vue3-recommended',
+  ],
 }
