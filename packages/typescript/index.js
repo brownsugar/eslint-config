@@ -43,9 +43,21 @@ module.exports = {
     '@stylistic/space-before-function-paren': 'error',
 
     // General rules
+    camelcase: 'error',
     curly: ['error', 'multi-or-nest'],
+    eqeqeq: 'error',
+    'no-new-func': 'error',
+    'no-new-object': 'error',
     'no-use-before-define': 'off',
     'no-useless-constructor': 'off',
+    'no-self-compare': 'error',
+    'no-sequences': 'error',
+    'no-throw-literal': 'error',
+    'no-undef-init': 'error',
+    'no-unmodified-loop-condition': 'error',
+    'no-unneeded-ternary': 'error',
+    'no-useless-constructor': 'error',
+    'no-useless-rename': 'error',
     // No default export found in imported module "*".
     'import/default': 'off',
   },
