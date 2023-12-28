@@ -4,7 +4,7 @@ Preferred ESLint configs for myself.
 
 ## For TypeScript
 
-The base config, inherits [eslint-recommended](https://eslint.org/docs/latest/rules/).
+The base config, inherits [ESLint recommended](https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js) and [ESLint Stylistic recommended](https://github.com/eslint-stylistic/eslint-stylistic/blob/main/packages/eslint-plugin/configs/customize.ts) with some custom rules.
 
 ### Install
 
