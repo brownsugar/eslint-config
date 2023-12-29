@@ -38,6 +38,7 @@ module.exports = {
     ...stylistic.configs['disable-legacy'].rules,
     ...stylistic.configs['recommended-extends'].rules,
     '@stylistic/arrow-parens': ['error', 'as-needed'],
+    '@stylistic/brace-style': 'error',
     '@stylistic/func-call-spacing': 'error',
     '@stylistic/quote-props': ['error', 'as-needed'],
     '@stylistic/space-before-function-paren': 'error',
