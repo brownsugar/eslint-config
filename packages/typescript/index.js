@@ -49,7 +49,7 @@ module.exports = {
     eqeqeq: 'error',
     'no-alert': 'error',
     'no-console': [
-      'error',
+      'warn',
       {
         allow: ['warn', 'error'],
       },
