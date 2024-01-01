@@ -47,6 +47,13 @@ module.exports = {
     camelcase: 'error',
     curly: ['error', 'multi-or-nest'],
     eqeqeq: 'error',
+    'no-alert': 'error',
+    'no-console': [
+      'error',
+      {
+        allow: ['warn', 'error'],
+      },
+    ],
     'no-new-func': 'error',
     'no-new-object': 'error',
     'no-use-before-define': 'off',
