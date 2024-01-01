@@ -1,6 +1,6 @@
 {
   "name": "@brownsugar/eslint-config-typescript",
-  "version": "2.2.1",
+  "version": "2.2.3",
   "description": "Preferred ESLint configs for TypeScript.",
   "main": "index.js",
   "files": [
