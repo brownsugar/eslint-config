@@ -1,9 +1,7 @@
-const { parserOptions, overrides } = require('@nuxt/eslint-config')
+const vueRules = require('../vue')
+const { createConfigForNuxt } = require('@nuxt/eslint-config/flat')
 
-module.exports = {
-  parserOptions,
-  extends: [
-    '@brownsugar/vue',
-  ],
-  overrides,
-}
+module.exports = createConfigForNuxt()
+  .prepend(
+    ...vueRules,
+  )

@@ -3,9 +3,6 @@
   "version": "2.2.4",
   "description": "Preferred ESLint configs for TypeScript.",
   "main": "index.js",
-  "files": [
-    "index.js"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brownsugar/eslint-config.git"
@@ -19,11 +16,10 @@
   },
   "homepage": "https://github.com/brownsugar/eslint-config",
   "dependencies": {
-    "@stylistic/eslint-plugin": "^1.5.1",
-    "@typescript-eslint/eslint-plugin": "^6.16.0",
-    "@typescript-eslint/parser": "^6.16.0"
+    "@stylistic/eslint-plugin": "^1.7.2",
+    "typescript-eslint": "^7.7.0"
   },
   "peerDependencies": {
-    "eslint": "^8"
+    "eslint": "^9"
   }
 }

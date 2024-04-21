@@ -3,9 +3,6 @@
   "version": "2.2.4",
   "description": "Preferred ESLint configs for Nuxt 3.",
   "main": "index.js",
-  "files": [
-    "index.js"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brownsugar/eslint-config.git"
@@ -20,7 +17,7 @@
   "homepage": "https://github.com/brownsugar/eslint-config",
   "dependencies": {
     "@brownsugar/eslint-config-vue": "^2.2.4",
-    "@nuxt/eslint-config": "^0.2.0"
+    "@nuxt/eslint-config": "^0.3.8"
   },
   "peerDependencies": {
     "nuxt": "^3"
