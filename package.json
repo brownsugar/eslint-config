@@ -18,7 +18,5 @@
     "eslint": "^9.1.0",
     "lerna": "^8.1.2"
   },
-  "workspaces": [
-    "packages/*"
-  ]
+  "packageManager": "pnpm@9.0.5"
 }
