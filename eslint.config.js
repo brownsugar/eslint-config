@@ -1,3 +1,8 @@
-const rules = require('./packages/typescript')
+const rules = require('.')
 
-module.exports = rules
+module.exports = [
+  {
+    ignores: ['**/dist/'],
+  },
+  ...rules,
+]

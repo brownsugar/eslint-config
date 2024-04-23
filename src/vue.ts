@@ -1,7 +1,9 @@
-const tsRules = require('../typescript')
-const pluginVue = require('eslint-plugin-vue')
+import tsRules from './typescript'
+// @ts-ignore
+import pluginVue from 'eslint-plugin-vue'
+import type { Linter } from 'eslint'
 
-module.exports = [
+export default <Linter.FlatConfig<Linter.RulesRecord>[]>[
   ...tsRules,
   ...pluginVue.configs['flat/recommended'],
   {

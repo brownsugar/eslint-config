@@ -1,22 +1,74 @@
 {
   "name": "@brownsugar/eslint-config",
-  "private": true,
   "version": "0.0.0",
   "description": "Preferred ESLint configs for myself.",
+  "author": "Lay",
+  "license": "MIT",
+  "homepage": "https://github.com/brownsugar/eslint-config",
   "scripts": {
-    "release": "lerna publish",
-    "lint": "eslint ."
+    "build": "rollup -c",
+    "lint": "eslint .",
+    "postversion": "git push && git push --tags"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/typescript.mjs",
+      "require": "./dist/typescript.cjs"
+    },
+    "./typescript": {
+      "import": "./dist/typescript.mjs",
+      "require": "./dist/typescript.cjs"
+    },
+    "./vue": {
+      "import": "./dist/vue.mjs",
+      "require": "./dist/vue.cjs"
+    },
+    "./nuxt": {
+      "import": "./dist/nuxt.mjs",
+      "require": "./dist/nuxt.cjs"
+    }
+  },
+  "main": "./dist/typescript.cjs",
+  "module": "./dist/typescript.mjs",
+  "types": "./dist/typescript.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brownsugar/eslint-config.git"
   },
-  "author": "Lay",
-  "license": "MIT",
-  "homepage": "https://github.com/brownsugar/eslint-config",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
-    "eslint": "^9.1.0",
-    "lerna": "^8.1.2"
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.1.1",
+    "lerna": "^8.1.2",
+    "rollup": "^4.16.4",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@nuxt/eslint-config": "^0.3.9",
+    "@stylistic/eslint-plugin": "^1.7.2",
+    "eslint-plugin-vue": "^9.25.0",
+    "typescript-eslint": "^7.7.1"
+  },
+  "peerDependencies": {
+    "eslint": "^9",
+    "vue": "^3",
+    "nuxt": "^3"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    },
+    "nuxt": {
+      "optional": true
+    }
   },
   "packageManager": "pnpm@9.0.5"
 }

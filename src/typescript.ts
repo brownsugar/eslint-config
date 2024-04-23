@@ -1,8 +1,18 @@
-const eslint = require('@eslint/js')
-const tsEslint = require('typescript-eslint')
-const stylistic = require('@stylistic/eslint-plugin')
+import globals from 'globals'
+import eslint from '@eslint/js'
+import tsEslint from 'typescript-eslint'
+import stylistic from '@stylistic/eslint-plugin'
+import type { Linter } from 'eslint'
 
-module.exports = [
+export default <Linter.FlatConfig<Linter.RulesRecord>[]>[
+  {
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+      },
+    },
+  },
   // TypeScript rules
   ...tsEslint.config({
     files: ['**/*.ts', '**/*.vue'],
@@ -54,7 +64,6 @@ module.exports = [
       'no-new-func': 'error',
       'no-new-object': 'error',
       'no-use-before-define': 'off',
-      'no-useless-constructor': 'off',
       'no-self-compare': 'error',
       'no-sequences': 'error',
       'no-throw-literal': 'error',
