@@ -1,5 +1,7 @@
 # ESLint Config
 
+[![Publish NPM Package](https://github.com/brownsugar/eslint-config/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/brownsugar/eslint-config/actions/workflows/main.yml)
+
 Preferred ESLint configs for myself.
 
 ### Install
