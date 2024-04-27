@@ -24,8 +24,7 @@
       "require": "./dist/vue.cjs"
     },
     "./nuxt": {
-      "import": "./dist/nuxt.mjs",
-      "require": "./dist/nuxt.cjs"
+      "import": "./dist/nuxt.mjs"
     }
   },
   "main": "./dist/typescript.cjs",
