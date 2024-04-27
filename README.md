@@ -2,71 +2,66 @@
 
 Preferred ESLint configs for myself.
 
-## For TypeScript
-
-The base config, inherits [ESLint recommended](https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js) and [ESLint Stylistic recommended](https://github.com/eslint-stylistic/eslint-stylistic/blob/main/packages/eslint-plugin/configs/customize.ts) with some custom rules.
-
 ### Install
 
 ```bash
-yarn add -D @brownsugar/eslint-config-typescript
+yarn add -D @brownsugar/eslint-config
 # or
-pnpm add -D @brownsugar/eslint-config-typescript
+pnpm add -D @brownsugar/eslint-config
 ```
 
-### .eslintrc
+## For TypeScript
 
-```json
-{
-  "root": true,
-  "extends": [
-    "@brownsugar/typescript"
-  ]
-}
+The base config, inherits below rule sets with some custom rules.
+ - [ESLint recommended](https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js)
+ - [ESLint Stylistic recommended](https://github.com/eslint-community/eslint-stylistic/blob/main/packages/eslint-plugin/configs/customize.ts)
+ - [TypeScript recommended](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/typescript-eslint/src/configs/recommended.ts)
+ - [TypeScript Stylistic](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/typescript-eslint/src/configs/stylistic.ts)
+
+### eslint.config.cjs
+
+```javascript
+const brownsugarConfig = require('@brownsugar/eslint-config/typescript')
+module.exports = brownsugarConfig
+```
+
+### eslint.config.mjs
+
+```javascript
+import brownsugarConfig from '@brownsugar/eslint-config/typescript'
+export default brownsugarConfig
 ```
 
 ## For Vue 3
 
-The config to use with TypeScript, inherits `@brownsugar/typescript`.
+The config to use with TypeScript, inherits `@brownsugar/eslint-config/typescript` with [Vue 3 recommended](https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/configs/flat/vue3-recommended.js).
 
-### Install
+### eslint.config.cjs
 
-```bash
-yarn add -D @brownsugar/eslint-config-vue
-# or
-pnpm add -D @brownsugar/eslint-config-vue
+```javascript
+const brownsugarConfig = require('@brownsugar/eslint-config/vue')
+module.exports = brownsugarConfig
 ```
 
-### .eslintrc
+### eslint.config.mjs
 
-```json
-{
-  "root": true,
-  "extends": [
-    "@brownsugar/vue"
-  ]
-}
+```javascript
+import brownsugarConfig from '@brownsugar/eslint-config/vue'
+export default brownsugarConfig
 ```
 
 ## For Nuxt 3
 
-The config to use with TypeScript, inherits `@brownsugar/vue`.
+The config to use with TypeScript, inherits `@brownsugar/eslint-config/vue` with [Nuxt 3 config](https://github.com/nuxt/eslint/blob/main/packages/eslint-config/src/flat/index.ts).
+### eslint.config.cjs
 
-### Install
-
-```bash
-yarn add -D @brownsugar/eslint-config-nuxt
-# or
-pnpm add -D @brownsugar/eslint-config-nuxt
+```javascript
+// Not supported
 ```
 
-### .eslintrc
+### eslint.config.mjs
 
-```json
-{
-  "root": true,
-  "extends": [
-    "@brownsugar/nuxt"
-  ]
-}
+```javascript
+import brownsugarConfig from '@brownsugar/eslint-config/nuxt'
+export default brownsugarConfig
 ```
