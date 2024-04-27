@@ -1,7 +1,7 @@
 import globals from 'globals'
-import eslint from '@eslint/js'
 import tsEslint from 'typescript-eslint'
 import stylistic from '@stylistic/eslint-plugin'
+import eslint from '@eslint/js'
 import type { Linter } from 'eslint'
 
 export default <Linter.FlatConfig<Linter.RulesRecord>[]>[
