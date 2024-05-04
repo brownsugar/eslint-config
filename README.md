@@ -4,7 +4,7 @@
 
 Preferred ESLint configs for myself.
 
-### Install
+## Install
 
 ```bash
 yarn add -D @brownsugar/eslint-config
