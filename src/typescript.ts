@@ -41,10 +41,9 @@ export default <Linter.FlatConfig<Linter.RulesRecord>[]>[
   {
     rules: {
       '@stylistic/arrow-parens': ['error', 'as-needed'],
-      '@stylistic/brace-style': 'error',
+      '@stylistic/brace-style': ['error', '1tbs'],
       '@stylistic/func-call-spacing': 'error',
       '@stylistic/quote-props': ['error', 'as-needed'],
-      '@stylistic/space-before-function-paren': 'error',
     },
   },
   // General rules
