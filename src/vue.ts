@@ -1,5 +1,5 @@
 import tsRules from './typescript'
-// @ts-ignore
+// @ts-expect-error no types provided
 import pluginVue from 'eslint-plugin-vue'
 import type { Linter } from 'eslint'
 
