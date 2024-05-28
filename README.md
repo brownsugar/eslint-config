@@ -55,6 +55,7 @@ export default brownsugarConfig
 ## For Nuxt 3
 
 The config to use with TypeScript, inherits `@brownsugar/eslint-config/vue` with [Nuxt 3 config](https://github.com/nuxt/eslint/blob/main/packages/eslint-config/src/flat/index.ts).
+
 ### eslint.config.cjs
 
 ```javascript
@@ -65,5 +66,10 @@ The config to use with TypeScript, inherits `@brownsugar/eslint-config/vue` with
 
 ```javascript
 import brownsugarConfig from '@brownsugar/eslint-config/nuxt'
-export default brownsugarConfig
+export default brownsugarConfig({
+  // Nuxt ESLint options
+  dirs: {
+    src: ['src'],
+  },
+})
 ```
