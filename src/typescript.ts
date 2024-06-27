@@ -1,7 +1,7 @@
 import globals from 'globals'
+import eslint from '@eslint/js'
 import tsEslint from 'typescript-eslint'
 import stylistic from '@stylistic/eslint-plugin'
-import eslint from '@eslint/js'
 import type { Linter } from 'eslint'
 
 export default <Linter.FlatConfig<Linter.RulesRecord>[]>[
@@ -11,6 +11,35 @@ export default <Linter.FlatConfig<Linter.RulesRecord>[]>[
         ...globals.node,
         ...globals.browser,
       },
+    },
+  },
+  // General rules
+  eslint.configs.recommended,
+  {
+    rules: {
+      camelcase: 'error',
+      curly: ['error', 'multi-or-nest'],
+      eqeqeq: 'error',
+      'no-alert': 'error',
+      'no-console': [
+        'warn',
+        {
+          allow: ['warn', 'error'],
+        },
+      ],
+      'no-new-func': 'error',
+      'no-new-object': 'error',
+      'no-use-before-define': 'off',
+      'no-self-compare': 'error',
+      'no-sequences': 'error',
+      'no-throw-literal': 'error',
+      'no-undef-init': 'error',
+      'no-unmodified-loop-condition': 'error',
+      'no-unneeded-ternary': 'error',
+      'no-useless-constructor': 'error',
+      'no-useless-rename': 'error',
+      // No default export found in imported module "*".
+      'import/default': 'off',
     },
   },
   // TypeScript rules
@@ -44,35 +73,6 @@ export default <Linter.FlatConfig<Linter.RulesRecord>[]>[
       '@stylistic/brace-style': ['error', '1tbs'],
       '@stylistic/func-call-spacing': 'error',
       '@stylistic/quote-props': ['error', 'as-needed'],
-    },
-  },
-  // General rules
-  eslint.configs.recommended,
-  {
-    rules: {
-      camelcase: 'error',
-      curly: ['error', 'multi-or-nest'],
-      eqeqeq: 'error',
-      'no-alert': 'error',
-      'no-console': [
-        'warn',
-        {
-          allow: ['warn', 'error'],
-        },
-      ],
-      'no-new-func': 'error',
-      'no-new-object': 'error',
-      'no-use-before-define': 'off',
-      'no-self-compare': 'error',
-      'no-sequences': 'error',
-      'no-throw-literal': 'error',
-      'no-undef-init': 'error',
-      'no-unmodified-loop-condition': 'error',
-      'no-unneeded-ternary': 'error',
-      'no-useless-constructor': 'error',
-      'no-useless-rename': 'error',
-      // No default export found in imported module "*".
-      'import/default': 'off',
     },
   },
 ]
