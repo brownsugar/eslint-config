@@ -65,6 +65,14 @@ export default <Linter.Config<Linter.RulesRecord>[]>[
       ],
       '@typescript-eslint/no-floating-promises': 'off',
       '@typescript-eslint/no-namespace': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
       '@typescript-eslint/no-var-requires': 'off',
     },
   }),
