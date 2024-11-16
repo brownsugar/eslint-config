@@ -4,7 +4,7 @@ import tsEslint from 'typescript-eslint'
 import stylistic from '@stylistic/eslint-plugin'
 import type { Linter } from 'eslint'
 
-export default <Linter.FlatConfig<Linter.RulesRecord>[]>[
+export default <Linter.Config<Linter.RulesRecord>[]>[
   {
     languageOptions: {
       globals: {

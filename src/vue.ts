@@ -1,10 +1,9 @@
 import tsRules from './typescript'
-// @ts-expect-error no types provided
 import pluginVue from 'eslint-plugin-vue'
 import tsEslint from 'typescript-eslint'
 import type { Linter } from 'eslint'
 
-export default <Linter.FlatConfig<Linter.RulesRecord>[]>[
+export default <Linter.Config<Linter.RulesRecord>[]>[
   ...tsRules,
   ...pluginVue.configs['flat/recommended'],
   {
