@@ -20,7 +20,7 @@ export default <Linter.Config<Linter.RulesRecord>[]>[
   eslint.configs.recommended,
   {
     rules: {
-      camelcase: ['error'],
+      camelcase: 'error',
       curly: ['error', 'multi-or-nest'],
       eqeqeq: 'error',
       'no-alert': 'error',
