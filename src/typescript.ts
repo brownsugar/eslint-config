@@ -6,6 +6,9 @@ import type { Linter } from 'eslint'
 
 export default <Linter.Config<Linter.RulesRecord>[]>[
   {
+    ignores: ['**/dist'],
+  },
+  {
     languageOptions: {
       globals: {
         ...globals.node,
@@ -17,7 +20,7 @@ export default <Linter.Config<Linter.RulesRecord>[]>[
   eslint.configs.recommended,
   {
     rules: {
-      camelcase: 'error',
+      camelcase: ['error'],
       curly: ['error', 'multi-or-nest'],
       eqeqeq: 'error',
       'no-alert': 'error',
