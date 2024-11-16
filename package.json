@@ -7,7 +7,7 @@
   "homepage": "https://github.com/brownsugar/eslint-config",
   "scripts": {
     "build": "rollup -c",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "postversion": "git push && git push --tags"
   },
   "exports": {
