@@ -6,7 +6,7 @@ import type { Linter } from 'eslint'
 export default async (options?: NuxtESLintConfigOptions): Promise<Linter.Config<Linter.RulesRecord>[]> =>
   await createConfigForNuxt(options)
     .prepend(
-      ...vueRules,
+      ...vueRules as Linter.Config[],
     )
     .override('nuxt/vue/rules', {
       rules: {

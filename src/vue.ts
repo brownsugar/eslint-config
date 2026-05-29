@@ -1,9 +1,31 @@
+import { defineConfig } from 'eslint/config'
 import tsRules from './typescript'
 import pluginVue from 'eslint-plugin-vue'
 import tsEslint from 'typescript-eslint'
 import type { Linter } from 'eslint'
 
-export default <Linter.Config<Linter.RulesRecord>[]>[
+const vueRules: Linter.RulesRecord = {
+  'vue/attributes-order': ['error', {
+    order: [
+      'DEFINITION',
+      'LIST_RENDERING',
+      'CONDITIONALS',
+      'RENDER_MODIFIERS',
+      'GLOBAL',
+      'UNIQUE',
+      'SLOT',
+      'TWO_WAY_BINDING',
+      'OTHER_DIRECTIVES',
+      'CONTENT',
+      'ATTR_DYNAMIC',
+      'ATTR_STATIC',
+      'ATTR_SHORTHAND_BOOL',
+      'EVENTS',
+    ],
+  }],
+}
+
+export default defineConfig([
   ...tsRules,
   ...pluginVue.configs['flat/recommended'],
   {
@@ -14,25 +36,6 @@ export default <Linter.Config<Linter.RulesRecord>[]>[
         extraFileExtensions: ['.vue'],
       },
     },
-    rules: {
-      'vue/attributes-order': ['error', {
-        order: [
-          'DEFINITION',
-          'LIST_RENDERING',
-          'CONDITIONALS',
-          'RENDER_MODIFIERS',
-          'GLOBAL',
-          'UNIQUE',
-          'SLOT',
-          'TWO_WAY_BINDING',
-          'OTHER_DIRECTIVES',
-          'CONTENT',
-          'ATTR_DYNAMIC',
-          'ATTR_STATIC',
-          'ATTR_SHORTHAND_BOOL',
-          'EVENTS',
-        ],
-      }],
-    },
+    rules: vueRules,
   },
-]
+])
