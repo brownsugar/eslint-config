@@ -2,11 +2,11 @@ import typescript from 'rollup-plugin-typescript2'
 
 const bundles = {
   typescript: {
-    cjs: true,
+    cjs: false,
     es: true,
   },
   vue: {
-    cjs: true,
+    cjs: false,
     es: true,
   },
   nuxt: {

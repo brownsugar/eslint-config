@@ -13,17 +13,14 @@
   "exports": {
     ".": {
       "import": "./dist/typescript.mjs",
-      "require": "./dist/typescript.cjs",
       "types": "./dist/typescript.d.ts"
     },
     "./typescript": {
       "import": "./dist/typescript.mjs",
-      "require": "./dist/typescript.cjs",
       "types": "./dist/typescript.d.ts"
     },
     "./vue": {
       "import": "./dist/vue.mjs",
-      "require": "./dist/vue.cjs",
       "types": "./dist/vue.d.ts"
     },
     "./nuxt": {
@@ -31,7 +28,6 @@
       "types": "./dist/nuxt.d.ts"
     }
   },
-  "main": "./dist/typescript.cjs",
   "module": "./dist/typescript.mjs",
   "types": "./dist/typescript.d.ts",
   "files": [
