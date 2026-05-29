@@ -1,10 +1,10 @@
+import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 import eslint from '@eslint/js'
 import tsEslint from 'typescript-eslint'
 import stylistic from '@stylistic/eslint-plugin'
-import type { Linter } from 'eslint'
 
-export default <Linter.Config<Linter.RulesRecord>[]>[
+export default defineConfig([
   {
     ignores: ['**/dist'],
   },
@@ -46,7 +46,7 @@ export default <Linter.Config<Linter.RulesRecord>[]>[
     },
   },
   // TypeScript rules
-  ...tsEslint.config({
+  {
     files: ['**/*.ts', '**/*.vue'],
     extends: [
       ...tsEslint.configs.recommended,
@@ -74,10 +74,10 @@ export default <Linter.Config<Linter.RulesRecord>[]>[
         },
       ],
     },
-  }),
+  },
   // Stylistic rules
-  stylistic.configs.recommended,
   {
+    ...stylistic.configs.customize(),
     rules: {
       '@stylistic/arrow-parens': ['error', 'as-needed'],
       '@stylistic/brace-style': ['error', '1tbs'],
@@ -85,4 +85,4 @@ export default <Linter.Config<Linter.RulesRecord>[]>[
       '@stylistic/quote-props': ['error', 'as-needed'],
     },
   },
-]
+])
