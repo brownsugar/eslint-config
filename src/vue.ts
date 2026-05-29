@@ -1,7 +1,7 @@
 import { defineConfig } from 'eslint/config'
 import tsRules from './typescript'
 import pluginVue from 'eslint-plugin-vue'
-import tsEslint from 'typescript-eslint'
+import { parser as tsEslintParser } from 'typescript-eslint'
 import type { Linter } from 'eslint'
 
 const vueRules: Linter.RulesRecord = {
@@ -32,7 +32,7 @@ export default defineConfig([
     files: ['**/*.vue'],
     languageOptions: {
       parserOptions: {
-        parser: tsEslint.parser,
+        parser: tsEslintParser,
         extraFileExtensions: ['.vue'],
       },
     },

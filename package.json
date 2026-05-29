@@ -43,6 +43,8 @@
   },
   "devDependencies": {
     "eslint": "^10.4.0",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
     "rollup": "^4.60.4",
     "rollup-plugin-typescript2": "^0.37.0",
     "tslib": "^2.8.1",

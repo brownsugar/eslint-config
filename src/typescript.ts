@@ -1,7 +1,8 @@
 import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 import eslint from '@eslint/js'
-import tsEslint from 'typescript-eslint'
+import importPlugin from 'eslint-plugin-import'
+import { configs as tsEslintConfigs } from 'typescript-eslint'
 import stylistic from '@stylistic/eslint-plugin'
 import type { Linter } from 'eslint'
 
@@ -27,11 +28,11 @@ const baseRules: Linter.RulesRecord = {
   'no-unneeded-ternary': 'error',
   'no-useless-constructor': 'error',
   'no-useless-rename': 'error',
-  // No default export found in imported module "*".
-  'import/default': 'off',
 }
 
 const typescriptRules: Linter.RulesRecord = {
+  // Pending support for ESLint v10
+  // 'import/order': 'error',
   '@typescript-eslint/consistent-type-assertions': 'off',
   '@typescript-eslint/ban-ts-comment': 'off',
   '@typescript-eslint/no-empty-function': 'off',
@@ -62,8 +63,6 @@ const stylisticRules: Linter.RulesRecord = {
 export default defineConfig([
   {
     ignores: ['**/dist'],
-  },
-  {
     languageOptions: {
       globals: {
         ...globals.node,
@@ -71,22 +70,29 @@ export default defineConfig([
       },
     },
   },
-  // General rules
+  // Base rules
   eslint.configs.recommended,
   {
     rules: baseRules,
   },
   // TypeScript rules
   {
-    files: ['**/*.ts', '**/*.vue'],
+    files: ['**/*.{ts,tsx}'],
+    settings: {
+      'import/resolver': {
+        typescript: true,
+        node: true,
+      },
+    },
     extends: [
-      ...tsEslint.configs.recommended,
-      ...tsEslint.configs.stylistic,
+      ...tsEslintConfigs.recommended,
+      ...tsEslintConfigs.stylistic,
+      importPlugin.flatConfigs.recommended,
+      importPlugin.flatConfigs.typescript,
     ],
     rules: typescriptRules,
   },
   // Stylistic rules
-  // @ts-ignore
   stylistic.configs.customize(),
   {
     rules: stylisticRules,
