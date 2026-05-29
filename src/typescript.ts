@@ -31,7 +31,7 @@ export default <Linter.Config<Linter.RulesRecord>[]>[
         },
       ],
       'no-new-func': 'error',
-      'no-new-object': 'error',
+      'no-object-constructor': 'error',
       'no-use-before-define': 'off',
       'no-self-compare': 'error',
       'no-sequences': 'error',
@@ -57,10 +57,10 @@ export default <Linter.Config<Linter.RulesRecord>[]>[
       '@typescript-eslint/consistent-type-assertions': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',
       '@typescript-eslint/no-empty-function': 'off',
-      '@typescript-eslint/no-empty-interface': [
+      '@typescript-eslint/no-empty-object-type': [
         'error',
         {
-          allowSingleExtends: true,
+          allowInterfaces: 'with-single-extends',
         },
       ],
       '@typescript-eslint/no-floating-promises': 'off',
@@ -73,16 +73,15 @@ export default <Linter.Config<Linter.RulesRecord>[]>[
           varsIgnorePattern: '^_',
         },
       ],
-      '@typescript-eslint/no-var-requires': 'off',
     },
   }),
   // Stylistic rules
-  stylistic.configs['recommended-flat'],
+  stylistic.configs.recommended,
   {
     rules: {
       '@stylistic/arrow-parens': ['error', 'as-needed'],
       '@stylistic/brace-style': ['error', '1tbs'],
-      '@stylistic/func-call-spacing': 'error',
+      '@stylistic/function-call-spacing': 'error',
       '@stylistic/quote-props': ['error', 'as-needed'],
     },
   },
