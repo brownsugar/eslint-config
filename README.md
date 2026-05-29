@@ -17,8 +17,8 @@ pnpm add -D @brownsugar/eslint-config
 The base config, inherits below rule sets with some custom rules.
  - [ESLint recommended](https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js)
  - [ESLint Stylistic recommended](https://github.com/eslint-community/eslint-stylistic/blob/main/packages/eslint-plugin/configs/customize.ts)
- - [TypeScript recommended](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/typescript-eslint/src/configs/recommended.ts)
- - [TypeScript Stylistic](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/typescript-eslint/src/configs/stylistic.ts)
+ - [TypeScript recommended](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/flat/recommended.ts)
+ - [TypeScript Stylistic](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/flat/stylistic.ts)
 
 ### eslint.config.mjs
 
@@ -29,7 +29,7 @@ export default brownsugarConfig
 
 ## For Vue 3
 
-The config to use with TypeScript, inherits `@brownsugar/eslint-config/typescript` with [Vue 3 recommended](https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/configs/flat/vue3-recommended.js).
+The config to use with TypeScript, inherits `@brownsugar/eslint-config/typescript` with [Vue 3 recommended](https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/configs/flat/vue3-recommended.ts).
 
 ### eslint.config.mjs
 
@@ -38,9 +38,9 @@ import brownsugarConfig from '@brownsugar/eslint-config/vue'
 export default brownsugarConfig
 ```
 
-## For Nuxt 3
+## For Nuxt 3/4
 
-The config to use with TypeScript, inherits `@brownsugar/eslint-config/vue` with [Nuxt 3 config](https://github.com/nuxt/eslint/blob/main/packages/eslint-config/src/flat/index.ts).
+The config to use with TypeScript, inherits `@brownsugar/eslint-config/vue` with [Nuxt 3 config](https://github.com/nuxt/eslint/blob/main/packages/eslint-config/src/index.ts).
 
 ### eslint.config.mjs
 
