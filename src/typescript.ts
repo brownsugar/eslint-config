@@ -77,7 +77,7 @@ export default defineConfig([
   },
   // TypeScript rules
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{js,ts,tsx}'],
     settings: {
       'import/resolver': {
         typescript: true,
