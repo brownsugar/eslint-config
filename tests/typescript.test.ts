@@ -13,20 +13,26 @@ describe('typescript config rules', () => {
   it.each<[rule: string, invalid: string, valid: string]>([
     // base rules
     ['camelcase',
-      'export const my_snake_case = 1\n',
-      'export const myVar = 1\n'],
-    ['curly',
+      'export const my_val = 1\n',
+      'export const myVal = 1\n'],
+    ['curly', // 'multi-or-nest': unnecessary braces around single-statement body
       'export function f() {\n  if (true) {\n    return 1\n  }\n}\n',
       'export function f() {\n  if (true)\n    return 1\n}\n'],
+    ['curly', // 'multi-or-nest': body expression spanning multiple lines requires braces
+      'if (x)\n  (doA(),\n  doB())\n',
+      'if (x) {\n  doA()\n  doB()\n}\n'],
     ['eqeqeq',
       'export const x = (1 == 1)\n',
       'export const x = (1 === 1)\n'],
     ['no-alert',
       'alert("hi")\n',
       'export const x = 1\n'],
-    ['no-console',
+    ['no-console', // allow: ['warn', 'error']
       'console.log("test")\n',
       'console.warn("test")\n'],
+    ['no-console', // allow: ['warn', 'error']
+      'console.log("test")\n',
+      'console.error("test")\n'],
     ['no-new-func',
       'export const f = new Function("return 1")\n',
       'export function f() { return 1 }\n'],
@@ -57,27 +63,41 @@ describe('typescript config rules', () => {
     ['no-useless-rename',
       'const obj = { a: 1 }\nconst { a: a } = obj\nexport { a }\n',
       'const obj = { a: 1 }\nconst { a: b } = obj\nexport { b }\n'],
+
     // typescript rules
-    ['@typescript-eslint/no-empty-object-type',
+    ['@typescript-eslint/no-empty-object-type', // allowInterfaces: 'with-single-extends'
       'export interface Foo {}\n',
-      'export interface Foo { id: number }\n'],
-    ['@typescript-eslint/no-unused-vars',
+      'export interface Foo extends Record<string, unknown> {}\n'],
+    ['@typescript-eslint/no-unused-vars', // args: 'after-used'
+      'export function f(used: number, notUsed: number) { return used }\n',
+      'export function f(notUsed: number, used: number) { return used }\n'],
+    ['@typescript-eslint/no-unused-vars', // argsIgnorePattern: '^_'
+      'export function f(used: number, notUsed: number) { return used }\n',
+      'export function f(used: number, _notUsed: number) { return used }\n'],
+    ['@typescript-eslint/no-unused-vars', // varsIgnorePattern: '^_'
       'const myUnused = 1\nexport {}\n',
-      'export const myUsed = 1\n'],
+      'const _unused = 1\nexport {}\n'],
+
     // stylistic rules
-    ['@stylistic/arrow-parens',
+    ['@stylistic/arrow-parens', // 'as-needed': single param
       'export const fn = (x) => x\n',
       'export const fn = x => x\n'],
+    ['@stylistic/arrow-parens', // 'as-needed': multiple params
+      'export const fn = (x) => x\n',
+      'export const fn = (x, y) => x + y\n'],
     ['@stylistic/brace-style',
       'export function foo()\n{\n  return 1\n}\n',
       'export function foo() {\n  return 1\n}\n'],
     ['@stylistic/function-call-spacing',
       'function foo() {}\nexport const x = foo ()\n',
       'function foo() {}\nexport const x = foo()\n'],
-    ['@stylistic/quote-props',
+    ['@stylistic/quote-props', // 'as-needed': identifier key
       'export const obj = { \'foo\': 1 }\n',
       'export const obj = { foo: 1 }\n'],
-  ])('%s', async (rule, invalid, valid) => {
+    ['@stylistic/quote-props', // 'as-needed': non-identifier key
+      'export const obj = { \'foo\': 1 }\n',
+      'export const obj = { \'foo-bar\': 1 }\n'],
+  ])('%s — invalid triggers error, valid stays clean', async (rule, invalid, valid) => {
     const errors = await lintCode(tsConfig, invalid, 'test.ts')
     expect(
       errors.filter(m => m.ruleId === rule).length,
