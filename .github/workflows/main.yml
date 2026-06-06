@@ -32,8 +32,8 @@ jobs:
           run_install: false
 
       - run: pnpm install --frozen-lockfile
-      - run: pnpm lint
       - run: pnpm build
+      - run: pnpm lint
       - run: pnpm test
       - run: npm publish --access public --provenance
         env:
