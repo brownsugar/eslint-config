@@ -1,6 +1,6 @@
 {
   "name": "@brownsugar/eslint-config",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "Preferred ESLint configs for myself.",
   "author": "Lay",
   "license": "MIT",
