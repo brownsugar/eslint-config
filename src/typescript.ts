@@ -6,7 +6,7 @@ import { configs as tsEslintConfigs } from 'typescript-eslint'
 import stylistic from '@stylistic/eslint-plugin'
 import type { Linter } from 'eslint'
 
-const baseRules: Linter.RulesRecord = {
+export const baseRules: Linter.RulesRecord = {
   camelcase: 'error',
   curly: ['error', 'multi-or-nest'],
   eqeqeq: 'error',
@@ -30,7 +30,7 @@ const baseRules: Linter.RulesRecord = {
   'no-useless-rename': 'error',
 }
 
-const typescriptRules: Linter.RulesRecord = {
+export const typescriptRules: Linter.RulesRecord = {
   // Pending support for ESLint v10
   // 'import/order': 'error',
   '@typescript-eslint/consistent-type-assertions': 'off',
@@ -53,7 +53,7 @@ const typescriptRules: Linter.RulesRecord = {
   ],
 }
 
-const stylisticRules: Linter.RulesRecord = {
+export const stylisticRules: Linter.RulesRecord = {
   '@stylistic/arrow-parens': ['error', 'as-needed'],
   '@stylistic/brace-style': ['error', '1tbs'],
   '@stylistic/function-call-spacing': 'error',

@@ -1,10 +1,10 @@
 import { defineConfig } from 'eslint/config'
-import tsRules from './typescript'
+import tsConfig from './typescript'
 import pluginVue from 'eslint-plugin-vue'
 import { parser as tsEslintParser } from 'typescript-eslint'
 import type { Linter } from 'eslint'
 
-const vueRules: Linter.RulesRecord = {
+export const vueRules: Linter.RulesRecord = {
   'vue/attributes-order': ['error', {
     order: [
       'DEFINITION',
@@ -26,7 +26,7 @@ const vueRules: Linter.RulesRecord = {
 }
 
 export default defineConfig([
-  ...tsRules,
+  ...tsConfig,
   ...pluginVue.configs['flat/recommended'],
   {
     files: ['**/*.vue'],
