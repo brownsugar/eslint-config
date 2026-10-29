@@ -544,6 +544,7 @@ exports[`typescript config > full resolved rules for .ts files match snapshot 1`
     {
       "args": "after-used",
       "argsIgnorePattern": "^_",
+      "caughtErrorsIgnorePattern": "^_",
       "varsIgnorePattern": "^_",
     },
   ],

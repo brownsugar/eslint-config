@@ -48,6 +48,7 @@ export const typescriptRules: Linter.RulesRecord = {
     {
       args: 'after-used',
       argsIgnorePattern: '^_',
+      caughtErrorsIgnorePattern: '^_',
       varsIgnorePattern: '^_',
     },
   ],

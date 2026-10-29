@@ -74,6 +74,9 @@ describe('typescript config rules', () => {
     ['@typescript-eslint/no-unused-vars', // argsIgnorePattern: '^_'
       'export function f(used: number, notUsed: number) { return used }\n',
       'export function f(used: number, _notUsed: number) { return used }\n'],
+    ['@typescript-eslint/no-unused-vars', // caughtErrorsIgnorePattern: '^_'
+      'try {\n} catch (e) {}\n',
+      'try {\n} catch (_e) {}\n'],
     ['@typescript-eslint/no-unused-vars', // varsIgnorePattern: '^_'
       'const myUnused = 1\nexport {}\n',
       'const _unused = 1\nexport {}\n'],
