@@ -695,6 +695,9 @@ exports[`nuxt config rules > full resolved rules for .ts and .vue files match sn
     ],
     "no-constant-binary-expression": [
       2,
+      {
+        "checkRelationalComparisons": false,
+      },
     ],
     "no-constant-condition": [
       2,
@@ -882,6 +885,9 @@ exports[`nuxt config rules > full resolved rules for .ts and .vue files match sn
     ],
     "no-unmodified-loop-condition": [
       2,
+      {
+        "checkConditionalExpressions": false,
+      },
     ],
     "no-unneeded-ternary": [
       2,
@@ -998,6 +1004,7 @@ exports[`nuxt config rules > full resolved rules for .ts and .vue files match sn
     "preserve-caught-error": [
       2,
       {
+        "errorClassNames": [],
         "requireCatchParameter": false,
       },
     ],
@@ -1994,6 +2001,9 @@ exports[`nuxt config rules > full resolved rules for .ts and .vue files match sn
     ],
     "no-constant-binary-expression": [
       2,
+      {
+        "checkRelationalComparisons": false,
+      },
     ],
     "no-constant-condition": [
       2,
@@ -2175,6 +2185,9 @@ exports[`nuxt config rules > full resolved rules for .ts and .vue files match sn
     ],
     "no-unmodified-loop-condition": [
       2,
+      {
+        "checkConditionalExpressions": false,
+      },
     ],
     "no-unneeded-ternary": [
       2,
@@ -2291,6 +2304,7 @@ exports[`nuxt config rules > full resolved rules for .ts and .vue files match sn
     "preserve-caught-error": [
       2,
       {
+        "errorClassNames": [],
         "requireCatchParameter": false,
       },
     ],

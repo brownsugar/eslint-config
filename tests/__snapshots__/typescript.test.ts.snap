@@ -655,6 +655,9 @@ exports[`typescript config > full resolved rules for .ts files match snapshot 1`
   ],
   "no-constant-binary-expression": [
     2,
+    {
+      "checkRelationalComparisons": false,
+    },
   ],
   "no-constant-condition": [
     2,
@@ -842,6 +845,9 @@ exports[`typescript config > full resolved rules for .ts files match snapshot 1`
   ],
   "no-unmodified-loop-condition": [
     2,
+    {
+      "checkConditionalExpressions": false,
+    },
   ],
   "no-unneeded-ternary": [
     2,
@@ -955,6 +961,7 @@ exports[`typescript config > full resolved rules for .ts files match snapshot 1`
   "preserve-caught-error": [
     2,
     {
+      "errorClassNames": [],
       "requireCatchParameter": false,
     },
   ],
